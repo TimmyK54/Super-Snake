@@ -52,7 +52,7 @@ public class SnakeGame {
 
 		// INSTANCE VARIABLES & OBJECTS
 		private final String infoString = "Super-Snake " + version + ", Mar 2018";
-		private final File leaderboardsFile = new File("Highscores.txt");
+		private final File leaderboardsFile = new File("SuperSnakeHighscores.txt");
 
 		private final int
 			cellSize = 20,
