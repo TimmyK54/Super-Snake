@@ -23,15 +23,17 @@ import javax.swing.Timer;
 
 /**
  * 	Project started on February 13, 2018
- *  v.1.0.0 completed on March 5, 2018
+ *  v.1.0.0 completed on March 4, 2018
  * 	by Tushar Khan
  */
 public class SnakeGame {
 
+	static String version = "v.1.0.0";
+	
 	public static void main(String[] args) {
 		final int rows = 36, columns = 46;
 
-		JFrame GUI = new JFrame("Super Snake");
+		JFrame GUI = new JFrame("Super Snake " + version);
 
 		SnakeGame x = new SnakeGame();
 		SnakePanel contentPanel = x.new SnakePanel(rows, columns);
@@ -49,7 +51,7 @@ public class SnakeGame {
 	public class SnakePanel extends JLayeredPane {
 
 		// INSTANCE VARIABLES & OBJECTS
-		private final String infoString = "Super-Snake v1.0.0, Mar 2018";
+		private final String infoString = "Super-Snake " + version + ", Mar 2018";
 		private final File leaderboardsFile = new File("Highscores.txt");
 
 		private final int
