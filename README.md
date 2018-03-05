@@ -26,7 +26,7 @@ The downloaded [.jar file](https://github.com/TimmyK54/Super-Snake/blob/master/S
 #### Powerups
 There are various powerups to be taken advantage of in Super Snake - 5 to be exact! Powerups can be obtained by eating special colored pellets. Each powerup lasts for 6 seconds, and can be stacked. Eating a special pellet when you currently have an active powerup will not replace your current powerup. However you will not have a visual indicator for when the previous powerup runs out!
 
-Here is a list of the 5 powerups and what they do:
+Here is a list of each of the powerups and what they do:
 
 Powerup | Color | Image | Description
 :------:|:-----:|:-----:|:-----------
@@ -61,6 +61,7 @@ To determine the next move, the algorithm follows these set of steps:
 To test the performance of the AI, I ran 10000 simulations of the algorithm and compiled the results. The Short-Sighted Algorithm on average attains a score of 84.9 with a standard deviation of 30.7 - an embarrassing score considering the minimum theoretical score to beat the game is 1656 (36 rows x 46 columns). This means on average, the AI only completes about 5% of the game. Not very sustainable if you asked me.
 
 These are the percentiles of the simulation:
+
 Percentile|Value
 :--------:|:---:
 Average|85
