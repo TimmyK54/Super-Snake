@@ -72,7 +72,7 @@ Percentile|Value
 99%|162
 100% - Maximum|197
 
-In conclusion, the algorithm is obviously very flawed, but it is not too bad given its rudimentary procedure. It performs slightly worse than the average player, but it doesn't have the knowledge of the entire game state like the user does. It doesn't even realize it's trapped itself until it's too late. Given that it is a purely reactionary algorithm, it performs surprisingly well - occasionally even better than me.
+The algorithm is obviously flawed, but it is not too bad given its rudimentary procedure. It performs slightly worse than the average player, but it doesn't have the knowledge of the entire game state like the user does. It doesn't even realize it's trapped itself until it's too late. Considering that it is a purely reactionary algorithm, it actually performs surprisingly well - occasionally even better than me.
 
 ## Version History
 
