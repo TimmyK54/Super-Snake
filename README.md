@@ -59,6 +59,3 @@ To determine the next move, the algorithm follows these set of steps:
 ## Version History
 
 1.0.0 (March 4, 2018) - initial version
-
-## License
-See the [LICENSE](https://github.com/TimmyK54/Super-Snake/blob/master/LICENSE) for rights and limitations.
