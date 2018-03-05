@@ -17,6 +17,7 @@ Requirements: Java 1.8+
 There are various powerups to be taken advantage of in Super Snake - 5 to be exact! Powerups can be obtained by eating special colored pellets. Each powerup lasts for 6 seconds, and can be stacked. Eating a special pellet when you currently have an active powerup will not replace your current powerup. But be careful using the previous powerup's effects because you won't have a visual indicator of when it runs out!
 
 Here is a list of the 5 powerups and what they do:
+
 Powerup | Color | Image | Description
 --------|-------|-------|------------
 Freeze|Blue|(not available)|This powerup halves your snake's speed. It is useful for performing precise maneuvers or slowing yourself down if you stacked up one too many turbo powerups. But be careful using this in multiplayer as it will give your opponents a temporary speed advantage!
