@@ -17,11 +17,11 @@ The downloaded .jar file does not run on a school computer because it is from an
 ## Gameplay
 
 #### Controls
-- Use WASD or the arrow keys to move.
-- Press space to pause.
-- In a menu screen, press enter to select a menu item.
-- In a menu screen, press backspace to return to the main menu.
-- After entering a leaderboard name, press tab to exit text box before pressing enter to play again.
+- Use WASD or the arrow keys to move
+- Press space to pause
+- In a menu screen, press enter to select a menu item
+- In a menu screen, press backspace to return to the main menu
+- After entering a leaderboard name, press tab to exit text box before pressing enter to play again
 
 #### Powerups
 There are various powerups to be taken advantage of in Super Snake - 5 to be exact! Powerups can be obtained by eating special colored pellets. Each powerup lasts for 6 seconds, and can be stacked. Eating a special pellet when you currently have an active powerup will not replace your current powerup. However you will not have a visual indicator for when the previous powerup runs out!
