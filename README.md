@@ -24,7 +24,7 @@ The downloaded [.jar file](https://github.com/TimmyK54/Super-Snake/blob/master/S
 - After entering a leaderboard name, press tab to exit text box before pressing enter to play again
 
 #### Powerups
-There are various powerups to be taken advantage of in Super Snake - 5 to be exact. Powerups can be obtained by eating special colored pellets. Each powerup lasts for 6 seconds, and can be stacked. Eating a special pellet when you currently have an active powerup will not replace your current powerup. However there is no visual indicator for when the previous powerup runs out!
+There are various powerups to be taken advantage of in Super Snake - 5 to be exact. Powerups can be obtained by eating special colored pellets. Each powerup lasts for 6 seconds and can be stacked with other powerups. Eating a special pellet when you currently have an active powerup will not replace your current powerup. However there is no visual indicator for when the previous powerup runs out!
 
 Here is a list of each of the powerups and what they do:
 
@@ -58,21 +58,21 @@ To determine the next move, the algorithm follows these set of steps:
 1. At this point, the algorithm should have determined that it is not in a corner and it is not going to run into an obstacle. Therefore, it should simply follow the *heuristic directions* originally determined. As to which direction it should choose, the algorithm will chose the direction it was previously traveling in if it can since that minimizes disorder.
 
 #### Statistics
-To test the performance of the AI, I ran 10000 simulations of the algorithm and compiled the results. The Short-Sighted Algorithm on average attains a score of 84.9 with a standard deviation of 30.7 - an embarrassing score considering the minimum theoretical score to beat the game is 1656 (36 rows x 46 columns). This means on average, the AI only completes about 5% of the game. Not very sustainable if you asked me.
+To test the performance of the AI, I ran 10000 simulations of the algorithm and compiled the results. The Short-Sighted Algorithm on average attains a score of 84.9 with a standard deviation of 30.7 - a measly amount considering the minimum theoretical score to beat the game is 1656 (36 rows x 46 columns). This means on average the AI only completes about 5% of the game.
 
 These are the percentiles of the simulation:
 
 Percentile|Value
 :---------|:---:
-0% - Minimum|14
+0%|14
 1%|27
 10%|47
-50% - Median|82
+50%|82
 90%|127
 99%|162
-100% - Maximum|197
+100%|197
 
-The algorithm is obviously flawed, but it is not too bad given its rudimentary procedure. It performs slightly worse than the average player, but it doesn't have the knowledge of the entire game state like the user does. It doesn't even realize it's trapped itself until it's too late. Considering that it is a purely reactionary algorithm, it actually performs surprisingly well - occasionally even better than me.
+The algorithm is obviously flawed, but it is not too bad given its rudimentary procedure. It performs slightly worse than the average player, but it doesn't have the knowledge of the entire game state like the user does. It doesn't even realize it's trapped itself until it's too late. Considering that it is a purely reactionary algorithm, it actually performs surprisingly well within its constraints - occasionally even better than me.
 
 ## Version History
 
