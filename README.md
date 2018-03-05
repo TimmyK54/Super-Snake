@@ -1,5 +1,5 @@
 # Super Snake
-This project is my first "real" programming application with a robust and functional GUI. It took about 4 and a half weeks to complete the first version, with approximately 15-20 hours of work per week. Essentially, it's a snake game that features powerups, multiplayer, and a built-in AI. If you decide to go through the code, be aware that the entire program is written in one class filled with nested subclasses, so it's not very well structured. However, I think I made it readable enough so navigation should really be the only issue.
+This project is my first "real" programming application with a robust and functional GUI. It took about 4 and a half weeks to complete the first version, with approximately 15-20 hours of work per week. Essentially, it's a snake game that features [powerups](https://github.com/TimmyK54/Super-Snake#powerups), [multiplayer](https://github.com/TimmyK54/Super-Snake#multiplayer), and a built-in [AI](https://github.com/TimmyK54/Super-Snake#ai). If you decide to go through the code, be aware that the entire program is written in one class filled with nested subclasses, so it's not very well structured. However, I think I made it readable enough so navigation should really be the only issue.
 
 ## Installation
 Requirements: Java 1.8+
