@@ -1,10 +1,10 @@
 # Super Snake
-This project is my first "real" programming application with a functional GUI and an extensive amount of work. It is essentially a snake game that features powerups, multiplayer, and a built-in AI. If you decide to go through the code, 
+This project is my first "real" programming application with a robust and functional GUI. It took about 4 and a half weeks to complete the first version, with approximately 15-20 hours of work per week. Essentially, it's a snake game that features powerups, multiplayer, and a built-in AI. If you decide to go through the code, be aware that the entire program is written in one class filled with nested subclasses, so it's not very well structured. However, I think I made it readable enough so navigation should really be the only issue.
 
-### Installation
+## Installation
 Requirements: Java 1.8+
 
-##### School Computer
+#### School Computer
 The downloaded .jar file does not run on a school computer because it is from an "unidentified developer" - me! Follow these steps to run this, or any other .jar file on your school computer:
 1. Make sure you have the .jar file downloaded
 1. If you don't have Eclipse, install Eclipse Java from the Self Service app
@@ -14,16 +14,16 @@ The downloaded .jar file does not run on a school computer because it is from an
 1. Add the downloaded .jar file to the src folder
 1. Done! Anytime you want to run the file, run it from the src folder in Eclipse
 
-### Gameplay
+## Gameplay
 
-##### Controls
+#### Controls
 - Use WASD or the arrow keys to move.
 - Press space to pause.
 - In a menu screen, press enter to select a menu item.
 - In a menu screen, press backspace to return to the main menu.
-- After entering a leaderboard name, press tab to exit text box before pressing enter to play aain.
+- After entering a leaderboard name, press tab to exit text box before pressing enter to play again.
 
-##### Powerups
+#### Powerups
 There are various powerups to be taken advantage of in Super Snake - 5 to be exact! Powerups can be obtained by eating special colored pellets. Each powerup lasts for 6 seconds, and can be stacked. Eating a special pellet when you currently have an active powerup will not replace your current powerup. But be careful using the previous powerup's effects because you won't have a visual indicator of when it runs out!
 
 Here is a list of the 5 powerups and what they do:
@@ -37,10 +37,25 @@ Ghost|Gray|(not available)|One of the more powerful powerups in the game, ghost 
 Growth|Green|(not available)|This powerup is relatively underrated, but it can be very powerful if used effectively. While a snake usually only grows by one each time it eats a pellet, a snake with the growth powerup will grow by one more for each active growth powerup. Make sure to try to eat as many pellets as you can while this powerup is active!
 Mystery|Magenta|(not available)|Wait, I thought you said there were 5 powerups? Well there are! The mystery powerup will grant you a random powerup from above. But you won't know what you get until you eat the pellet, so be ready for anything!
 
-##### Multiplayer
+#### Multiplayer
+In my opinion, the multiplayer in this game is pretty dope for a local snake multiplayer. In the multiplayer menu screen, you can select the number of players and CPUs with the WASD or arrow keys up to a max of 2 players, 20 AIs, and 20 total snakes. The game actually supports more players; in fact there is no real theoretical limit to the amount of snakes. However, it doesn't make much sense to have an option for 3 or more players because of a lack of sensible keyboard input from one computer. But, if this local multiplayer is ever extended to online (very unlikely), the support for more players is already built-in.
 
-### AI
+## AI
+The goal of the AI is to play a perfect game of snake by reacting to the current state of the game. Currently there is only one AI implemented in this game, and it is used both in the singleplayer AI and as the CPU in the multiplayer. Since I couldn't find a suitable and visually pleasing AI algorithm for the specific goal of beating a game of snake, I made my own unique algorithm that I call the **short-sighted algorithm** for the simple reason that it doesn't use maze searching or pathfinding to compute the future state resulting from present moves.
 
-### Version History
+#### Short-Sighted Algorithm
+Every time the AI has to make a move, it first computes three sets of values:
+1. **Heuristic Directions** - the one or two cardinal directions that the snake has to go to get to the pellet, assuming there are no obstacles in the way.
+1. **Wall Collision** - whether or not the first collision in each cardinal direction is a wall.
+1. **Collision Distance** - the distance in each cardinal direction from the snake's head to the nearest snake.
+
+Then to determine the next move, the algorithm follows these set of steps:
+1. Using the **collision distance** set, determine if the snake is in a corner - that is, surrounded on three sides. Is so go in the only direction that is not blocked. Otherwise, proceed to the next step.
+1. Using the **collision distance** set, determine if the current direction would cause the snake to run into an obstacle. If so, or if the pellet spawned behind the direction the snake is moving, follow the steps below. Otherwise, proceed to next step.
+  1. Using the **wall collision** set, determine if the snake can turn in a direction that will cause it to eventually run into a wall before it runs into a snake. If so, go in that direction. If both directions will cause it to eventually run into a wall, go in the direction specified by the **heuristic directions** set. Otherwise, proceed to the next step.
+  1. Using the **collision distance** set, go in the direction with a higher collision distance.
+1. At this point, the algorithm should have determined that it is not in a corner and it is not going to run into an obstacle. Therefore, it should simply follow the **heuristic directions** originally determined. As to which direction it should choose, the algorithm will chose the direction it was previously traveling in if it can since that minimizes disorder.
+
+## Version History
 
 1.0.0 (March 4, 2018) - initial version
