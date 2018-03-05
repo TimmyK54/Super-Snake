@@ -63,9 +63,7 @@ To test the performance of the AI, I ran 10000 simulations of the algorithm and 
 These are the percentiles of the simulation:
 
 Percentile|Value
-:--------:|:---:
-Average|85
-Standard Deviation|31
+:---------|:---:
 0% - Minimum|14
 1%|27
 10%|47
