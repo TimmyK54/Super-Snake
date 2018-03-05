@@ -45,16 +45,17 @@ The goal of the AI is to play a perfect game of snake by reacting to the current
 
 #### Short-Sighted Algorithm
 Every time the AI has to make a move, it first computes three sets of values:
-1. **Heuristic Directions** - the one or two cardinal directions that the snake has to go to get to the pellet, assuming there are no obstacles in the way.
-1. **Wall Collision** - whether or not the first collision in each cardinal direction is a wall.
-1. **Collision Distance** - the distance in each cardinal direction from the snake's head to the nearest snake.
+1. *Heuristic Directions* - the one or two cardinal directions that the snake has to go to get to the pellet, assuming there are no obstacles in the way.
+1. *Wall Collision* - whether or not the first collision in each cardinal direction is a wall.
+1. *Collision Distance* - the distance in each cardinal direction from the snake's head to the nearest snake.
+
 
 Then to determine the next move, the algorithm follows these set of steps:
-1. Using the **collision distance** set, determine if the snake is in a corner - that is, surrounded on three sides. Is so go in the only direction that is not blocked. Otherwise, proceed to the next step.
-1. Using the **collision distance** set, determine if the current direction would cause the snake to run into an obstacle. If so, or if the pellet spawned behind the direction the snake is moving, follow the steps below. Otherwise, proceed to next step.
-     1. Using the **wall collision** set, determine if the snake can turn in a direction that will cause it to eventually run into a wall before it runs into a snake. If so, go in that direction. If both directions will cause it to eventually run into a wall, go in the direction specified by the **heuristic directions** set. Otherwise, proceed to the next step.
-     1. Using the **collision distance** set, go in the direction with a higher collision distance.
-1. At this point, the algorithm should have determined that it is not in a corner and it is not going to run into an obstacle. Therefore, it should simply follow the **heuristic directions** originally determined. As to which direction it should choose, the algorithm will chose the direction it was previously traveling in if it can since that minimizes disorder.
+1. Using the *collision distance* set, determine if the snake is in a corner - that is, surrounded on three sides. Is so go in the only direction that is not blocked. Otherwise, proceed to the next step.
+1. Using the *collision distance* set, determine if the current direction would cause the snake to run into an obstacle. If so, or if the pellet spawned behind the direction the snake is moving, follow the steps below. Otherwise, proceed to next step.
+     1. Using the *wall collision* set, determine if the snake can turn in a direction that will cause it to eventually run into a wall before it runs into a snake. If so, go in that direction. If both directions will cause it to eventually run into a wall, go in the direction specified by the *heuristic directions* set. Otherwise, proceed to the next step.
+     1. Using the *collision distance* set, go in the direction with a higher collision distance.
+1. At this point, the algorithm should have determined that it is not in a corner and it is not going to run into an obstacle. Therefore, it should simply follow the *heuristic directions* originally determined. As to which direction it should choose, the algorithm will chose the direction it was previously traveling in if it can since that minimizes disorder.
 
 ## Version History
 
