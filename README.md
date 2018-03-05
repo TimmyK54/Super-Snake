@@ -1,11 +1,11 @@
 # Super Snake
-This project is my first "real" programming application with a robust and functional GUI. It took about 4 and a half weeks to complete the first version, with approximately 15-20 hours of work per week. Essentially, it's a snake game that features [powerups](https://github.com/TimmyK54/Super-Snake#powerups), [multiplayer](https://github.com/TimmyK54/Super-Snake#multiplayer), and a built-in [AI](https://github.com/TimmyK54/Super-Snake#ai). If you decide to go through the code, be aware that the entire program is written in one class filled with nested subclasses, so it's not very well structured. However, I think I made it readable enough so navigation should really be the only issue.
+This project is my first "real" programming application with a robust and functional GUI. It took about 4 and a half weeks to complete the first version, with approximately 15-20 hours of work per week. Essentially, it's a snake game that features [powerups](https://github.com/TimmyK54/Super-Snake#powerups), [multiplayer](https://github.com/TimmyK54/Super-Snake#multiplayer), and a built-in [AI](https://github.com/TimmyK54/Super-Snake#ai). If you decide to go through the [source code](https://github.com/TimmyK54/Super-Snake/tree/master/Super%20Snake/src), be aware that the entire program is written in one class filled with nested subclasses, so it's not very well structured. However, I think I made it readable enough so navigation should really be the only issue.
 
 ## Installation
 Requirements: Java 1.8+
 
 #### School Computer
-The downloaded .jar file does not run on a school computer because it is from an "unidentified developer" - that's me! Follow these steps to run this, or any other .jar file on your school computer:
+The downloaded [.jar file](https://github.com/TimmyK54/Super-Snake/blob/master/Super%20Snake.jar) does not run on a school computer because it is from an "unidentified developer" - that's me! Follow these steps to run this, or any other .jar file on your school computer:
 1. Make sure you have the .jar file downloaded
 1. If you don't have Eclipse, install Eclipse Java from the Self Service app
 1. Load up Eclipse and click out of the welcome tab if it's your first time on Eclipse
