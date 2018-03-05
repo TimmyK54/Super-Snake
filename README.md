@@ -24,18 +24,18 @@ The downloaded [.jar file](https://github.com/TimmyK54/Super-Snake/blob/master/S
 - After entering a leaderboard name, press tab to exit text box before pressing enter to play again
 
 #### Powerups
-There are various powerups to be taken advantage of in Super Snake - 5 to be exact! Powerups can be obtained by eating special colored pellets. Each powerup lasts for 6 seconds, and can be stacked. Eating a special pellet when you currently have an active powerup will not replace your current powerup. However you will not have a visual indicator for when the previous powerup runs out!
+There are various powerups to be taken advantage of in Super Snake - 5 to be exact. Powerups can be obtained by eating special colored pellets. Each powerup lasts for 6 seconds, and can be stacked. Eating a special pellet when you currently have an active powerup will not replace your current powerup. However there is no visual indicator for when the previous powerup runs out!
 
 Here is a list of each of the powerups and what they do:
 
 Powerup | Color | Image | Description
 :------:|:-----:|:-----:|:-----------
-Freeze|Blue|(not available)|This powerup halves your snake's speed. It is useful for performing precise maneuvers or slowing yourself down if you stacked up one too many turbo powerups.
-Turbo|Red|(not available)|This powerup doubles your snake's speed. It is useful in multiplayer to trap opponents or get to a pellet first.
-Warp|Yellow|(not available)|This powerup allows you to teleport through walls to the other side of the screen. It is useful for getting across quickly and beating your opponents to a pellet.
-Ghost|Gray|(not available)|One of the more powerful powerups in the game, ghost allows you to pass through other snakes - even yourself. It is very useful for escaping from some sticky situations and giving you a break from any obstacles in the game.
-Growth|Green|(not available)|While a snake usually only grows by one each time it eats a pellet, a snake with the growth powerup will grow by one more for each active growth powerup. This can be very powerful if used effectively.
-Mystery|Magenta|(not available)|Wait, I thought you said there were 5 powerups? Well there are! The mystery powerup will grant you a random powerup from above.
+Freeze|Blue|![Freeze Pod](https://github.com/TimmyK54/Super-Snake/blob/master/Images/FreezePod.gif)|This powerup halves your snake's speed. It is useful for performing precise maneuvers or slowing yourself down if you stacked up one too many turbo powerups.
+Turbo|Red|![Turbo Pod](https://github.com/TimmyK54/Super-Snake/blob/master/Images/TurboPod.gif)|This powerup doubles your snake's speed. It is useful in multiplayer to trap opponents or get to a pellet first.
+Warp|Yellow|![Warp Pod](https://github.com/TimmyK54/Super-Snake/blob/master/Images/WarpPod.gif)|This powerup allows you to teleport through walls to the other side of the screen. It is useful for getting across quickly and beating your opponents to a pellet.
+Ghost|Gray|![Ghost Pod](https://github.com/TimmyK54/Super-Snake/blob/master/Images/GhostPod.gif)|One of the more powerful powerups in the game, ghost allows you to pass through other snakes - even yourself. It is very useful for escaping from some sticky situations and giving you a break from any obstacles in the game.
+Growth|Green|![Growth Pod](https://github.com/TimmyK54/Super-Snake/blob/master/Images/GrowthPod.gif)|While a snake usually only grows by one each time it eats a pellet, a snake with the growth powerup will grow by one more for each active growth powerup. This can be very powerful if used effectively.
+Mystery|Magenta|![Mystery Pod](https://github.com/TimmyK54/Super-Snake/blob/master/Images/MysteryPod.gif)|The mystery powerup will grant you a random powerup from above. You won't know what powerup it contains until you eat it.
 
 #### Multiplayer
 In my biased opinion, the multiplayer in this game is pretty well integrated for a local snake multiplayer. In the multiplayer menu screen, you can select the number of players and CPUs with WASD or the arrow keys up to a max of 2 players, 20 AIs, and 20 total snakes. The game actually supports more players; in fact there is no real theoretical limit to the amount of snakes. However, it doesn't make much sense to have an option for 3 or more players because of a lack of sensible keyboard input from one computer. But, if this local multiplayer is ever extended to online multiplayer (very unlikely), the support for more players is already built-in.
