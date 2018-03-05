@@ -41,7 +41,8 @@ Mystery|Magenta|(not available)|Wait, I thought you said there were 5 powerups? 
 In my biased opinion, the multiplayer in this game is pretty well integrated for a local snake multiplayer. In the multiplayer menu screen, you can select the number of players and CPUs with WASD or the arrow keys up to a max of 2 players, 20 AIs, and 20 total snakes. The game actually supports more players; in fact there is no real theoretical limit to the amount of snakes. However, it doesn't make much sense to have an option for 3 or more players because of a lack of sensible keyboard input from one computer. But, if this local multiplayer is ever extended to online multiplayer (very unlikely), the support for more players is already built-in.
 
 ## AI
-The goal of the AI is to play a perfect game of snake by reacting to the current state of the game. Currently there is only one AI implemented in this game, and it is used both in the singleplayer AI and the CPU in the multiplayer. Since I couldn't find a suitable and visually pleasing AI algorithm for the specific goal of beating a game of snake, I made my own unique algorithm that I call the [short-sighted algorithm](https://github.com/TimmyK54/Super-Snake#short-sighted-algorithm) for the simple reason that it doesn't use maze searching or pathfinding to compute the future state resulting from present moves. It performs surprisingly well at first, but begins to show its flaws when it gets to a length of about 70.
+
+The goal of the AI is to play a perfect game of snake by reacting to the current state of the game. Currently there is only one AI implemented in this game, and it is used both in the singleplayer AI and the CPU in the multiplayer. Since I couldn't find a suitable and visually pleasing AI algorithm for the specific goal of beating a game of snake, I made my own unique algorithm that I call the [short-sighted algorithm](https://github.com/TimmyK54/Super-Snake#short-sighted-algorithm) for the simple reason that it doesn't use maze searching or pathfinding to compute the future state resulting from current moves. Instead, it reacts to obstacles immediately in its way. When faced with an obstacle, it considers the two cardinal directions it can move perpendicular to its current path, and chooses the path that will lead it to a wall without running into an obstacle (if it exists). This is because even if the wall is closer than an obstacle on the other side, there is an almost guaranteed chance it will not trap itself when it reaches the wall.
 
 #### Short-Sighted Algorithm
 Every time the AI has to make a move, it first computes three sets of values:
@@ -55,6 +56,24 @@ To determine the next move, the algorithm follows these set of steps:
      1. Using the *wall collision* set, determine if the snake can turn in a direction that will cause it to eventually run into a wall before it runs into a snake. If so, go in that direction. If both directions will cause it to eventually run into a wall, go in the direction specified by the *heuristic directions* set. Otherwise, proceed to the next step.
      1. Using the *collision distance* set, go in the direction with a higher collision distance.
 1. At this point, the algorithm should have determined that it is not in a corner and it is not going to run into an obstacle. Therefore, it should simply follow the *heuristic directions* originally determined. As to which direction it should choose, the algorithm will chose the direction it was previously traveling in if it can since that minimizes disorder.
+
+#### Statistics
+To test the performance of the AI, I ran 10000 simulations of the algorithm and compiled the results. The Short-Sighted Algorithm on average attains a score of 84.9 with a standard deviation of 30.7 - an embarrassing score considering the minimum theoretical score to beat the game is 1656 (36 rows x 46 columns). This means on average, the AI only completes about 5% of the game. Not very sustainable if you asked me.
+
+These are the percentiles of the simulation:
+Percentile|Value
+:--------:|:---:
+Average|85
+Standard Deviation|31
+0% - Minimum|14
+1%|27
+10%|47
+50% - Median|82
+90%|127
+99%|162
+100% - Maximum|197
+
+In conclusion, the algorithm is obviously very flawed, but it is not too bad given its rudimentary procedure. It performs slightly worse than the average player, but it doesn't have the knowledge of the entire game state like the user does. It doesn't even realize it's trapped itself until it's too late. Given that it is a purely reactionary algorithm, it performs surprisingly well - occasionally even better than me.
 
 ## Version History
 
