@@ -60,8 +60,6 @@ To determine the next move, the algorithm follows these set of steps:
 #### Statistics
 To test the performance of the AI, I ran 10000 simulations of the algorithm and compiled the results. The Short-Sighted Algorithm on average attains a score of 84.9 with a standard deviation of 30.7 - a measly amount considering the minimum theoretical score to beat the game is 1656 (36 rows x 46 columns). This means on average the AI only completes about 5% of the game.
 
-While the algorithm is obviously flawed, it is not too bad given its rudimentary procedure. It performs slightly worse than the average player, but it doesn't have the knowledge of the entire game state like the user does. It doesn't even realize it's trapped itself until it's too late. Considering that it is a purely reactionary algorithm, it actually performs surprisingly well within its constraints - occasionally even better than me.
-
 These are the percentiles of the simulation:
 
 Percentile|Value
@@ -81,6 +79,8 @@ Percentile|Value
 95%|140
 99%|162
 100%|197
+
+While the algorithm is obviously flawed, it is not too bad given its rudimentary procedure. It performs slightly worse than the average player, but it doesn't have the knowledge of the entire game state like the user does. It doesn't even realize it's trapped itself until it's too late. Considering that it is a purely reactionary algorithm, it actually performs surprisingly well within its constraints - occasionally even better than me.
 
 ## Version History
 
