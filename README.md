@@ -66,13 +66,21 @@ Percentile|Value
 :---------|:---:
 0%|14
 1%|27
+5%|39
 10%|47
+20%|58
+30%|66
+40%|74
 50%|82
+60%|90
+70%|100
+80%|111
 90%|127
+95%|140
 99%|162
 100%|197
 
-The algorithm is obviously flawed, but it is not too bad given its rudimentary procedure. It performs slightly worse than the average player, but it doesn't have the knowledge of the entire game state like the user does. It doesn't even realize it's trapped itself until it's too late. Considering that it is a purely reactionary algorithm, it actually performs surprisingly well within its constraints - occasionally even better than me.
+While the algorithm is obviously flawed, it is not too bad given its rudimentary procedure. It performs slightly worse than the average player, but it doesn't have the knowledge of the entire game state like the user does. It doesn't even realize it's trapped itself until it's too late. Considering that it is a purely reactionary algorithm, it actually performs surprisingly well within its constraints - occasionally even better than me.
 
 ## Version History
 
