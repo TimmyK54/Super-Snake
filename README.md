@@ -52,7 +52,7 @@ To test the performance of the AI, I ran 10000 simulations of the algorithm and 
 
 These are the percentiles of the simulation:
 
-Percentile|Value
+Percentile|Size
 :---------|:---:
 0%|14
 1%|27
