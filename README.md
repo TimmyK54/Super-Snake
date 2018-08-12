@@ -4,19 +4,6 @@ This project is my first "real" programming application with a robust and functi
 ## Installation
 Requirements: Java 1.8+
 
-<<<<<<< HEAD
-#### School Computer
-The downloaded [.jar file](https://github.com/TusharK54/Super-Snake/blob/master/Super%20Snake.jar) does not run on a school computer because it is from an "unidentified developer" - that's me! Follow these steps to run this, or any other .jar file on your school computer:
-1. Make sure you have the .jar file downloaded
-1. If you don't have Eclipse, install Eclipse Java from the Self Service app
-1. Load up Eclipse and click out of the welcome tab if it's your first time on Eclipse
-1. In the top bar, navigate to File >> New >> Java Project
-1. Name the file whatever you want - this will be the directory for all the future .jar files you download
-1. Navigate to the src folder in the file you just created and add the downloaded .jar to it
-1. Done! Anytime you want to run the .jar file, run it from the src folder in Eclipse
-
-=======
->>>>>>> branch 'master' of https://github.com/TusharK54/Super-Snake.git
 ## Gameplay
 
 #### Controls
