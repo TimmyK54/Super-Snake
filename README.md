@@ -4,6 +4,7 @@ This project is my first "real" programming application with a robust and functi
 ## Installation
 Requirements: Java 1.8+
 
+<<<<<<< HEAD
 #### School Computer
 The downloaded [.jar file](https://github.com/TusharK54/Super-Snake/blob/master/Super%20Snake.jar) does not run on a school computer because it is from an "unidentified developer" - that's me! Follow these steps to run this, or any other .jar file on your school computer:
 1. Make sure you have the .jar file downloaded
@@ -14,6 +15,8 @@ The downloaded [.jar file](https://github.com/TusharK54/Super-Snake/blob/master/
 1. Navigate to the src folder in the file you just created and add the downloaded .jar to it
 1. Done! Anytime you want to run the .jar file, run it from the src folder in Eclipse
 
+=======
+>>>>>>> branch 'master' of https://github.com/TusharK54/Super-Snake.git
 ## Gameplay
 
 #### Controls
@@ -24,21 +27,21 @@ The downloaded [.jar file](https://github.com/TusharK54/Super-Snake/blob/master/
 - After entering a leaderboard name, press tab to exit text box before pressing enter to play again
 
 #### Powerups
-There are various powerups to be taken advantage of in Super Snake - 5 to be exact! Powerups can be obtained by eating special colored pellets. Each powerup lasts for 6 seconds, and can be stacked. Eating a special pellet when you currently have an active powerup will not replace your current powerup. However you will not have a visual indicator for when the previous powerup runs out!
+There are various powerups to be taken advantage of in Super Snake - 5 to be exact. Powerups can be obtained by eating special colored pellets. Each powerup lasts for 6 seconds and can be stacked with other powerups. Eating a special pellet when you currently have an active powerup will not replace your current powerup. However there is no visual indicator for when the previous powerup runs out!
 
 Here is a list of each of the powerups and what they do:
 
 Powerup | Color | Image | Description
 :------:|:-----:|:-----:|:-----------
-Freeze|Blue|(not available)|This powerup halves your snake's speed. It is useful for performing precise maneuvers or slowing yourself down if you stacked up one too many turbo powerups.
-Turbo|Red|(not available)|This powerup doubles your snake's speed. It is useful in multiplayer to trap opponents or get to a pellet first.
-Warp|Yellow|(not available)|This powerup allows you to teleport through walls to the other side of the screen. It is useful for getting across quickly and beating your opponents to a pellet.
-Ghost|Gray|(not available)|One of the more powerful powerups in the game, ghost allows you to pass through other snakes - even yourself. It is very useful for escaping from some sticky situations and giving you a break from any obstacles in the game.
-Growth|Green|(not available)|While a snake usually only grows by one each time it eats a pellet, a snake with the growth powerup will grow by one more for each active growth powerup. This can be very powerful if used effectively.
-Mystery|Magenta|(not available)|Wait, I thought you said there were 5 powerups? Well there are! The mystery powerup will grant you a random powerup from above.
+Freeze|Blue|![Freeze Pod](https://github.com/TimmyK54/Super-Snake/blob/master/Images/FreezePod.gif)|This powerup halves your snake's speed. It is useful for performing precise maneuvers or slowing yourself down if you stacked up one too many turbo powerups.
+Turbo|Red|![Turbo Pod](https://github.com/TimmyK54/Super-Snake/blob/master/Images/TurboPod.gif)|This powerup doubles your snake's speed. It is useful in multiplayer to trap opponents or get to a pellet first.
+Warp|Yellow|![Warp Pod](https://github.com/TimmyK54/Super-Snake/blob/master/Images/WarpPod.gif)|This powerup allows you to teleport through walls to the other side of the screen. It is useful for getting across quickly and beating your opponents to a pellet.
+Ghost|Gray|![Ghost Pod](https://github.com/TimmyK54/Super-Snake/blob/master/Images/GhostPod.gif)|This powerup allows you to pass through other snakes - even yourself. It is very useful for escaping from traps and giving you a short break from obstacles in the game.
+Growth|Green|![Growth Pod](https://github.com/TimmyK54/Super-Snake/blob/master/Images/GrowthPod.gif)|While a snake usually only grows by one each time it eats a pellet, a snake with the growth powerup will grow by one more for each active growth powerup.
+Mystery|Magenta|![Mystery Pod](https://github.com/TimmyK54/Super-Snake/blob/master/Images/MysteryPod.gif)|The mystery powerup will grant you a random powerup from above. You won't know what powerup it contains until you eat it.
 
 #### Multiplayer
-In my biased opinion, the multiplayer in this game is pretty well integrated for a local snake multiplayer. In the multiplayer menu screen, you can select the number of players and CPUs with WASD or the arrow keys up to a max of 2 players, 20 AIs, and 20 total snakes. The game actually supports more players; in fact there is no real theoretical limit to the amount of snakes. However, it doesn't make much sense to have an option for 3 or more players because of a lack of sensible keyboard input from one computer. But, if this local multiplayer is ever extended to online multiplayer (very unlikely), the support for more players is already built-in.
+In the multiplayer menu screen, you can select the number of players and CPUs with WASD or the arrow keys up to a max of 2 players, 20 AIs, and 20 total snakes. The game actually supports more players; in fact there is no real theoretical limit to the amount of snakes. However, it doesn't make much sense to have an option for 3 or more players because of a lack of sensible keyboard input from one computer. But, if this local multiplayer is ever extended to online multiplayer (very unlikely), the support for more players is already built-in.
 
 ## AI
 
@@ -58,22 +61,22 @@ To determine the next move, the algorithm follows these set of steps:
 1. At this point, the algorithm should have determined that it is not in a corner and it is not going to run into an obstacle. Therefore, it should simply follow the *heuristic directions* originally determined. As to which direction it should choose, the algorithm will chose the direction it was previously traveling in if it can since that minimizes disorder.
 
 #### Statistics
-To test the performance of the AI, I ran 10000 simulations of the algorithm and compiled the results. The Short-Sighted Algorithm on average attains a score of 84.9 with a standard deviation of 30.7 - an embarrassing score considering the minimum theoretical score to beat the game is 1656 (36 rows x 46 columns). This means on average, the AI only completes about 5% of the game. Not very sustainable if you asked me.
+To test the performance of the AI, I ran 10000 simulations of the algorithm and compiled the results. The Short-Sighted Algorithm on average attains a score of 84.9 with a standard deviation of 30.7 - a measly amount considering the minimum theoretical score to beat the game is 1656 (36 rows x 46 columns). This means on average the AI only completes about 5% of the game.
 
 These are the percentiles of the simulation:
 
-Percentile|Value
+Percentile|Size
 :---------|:---:
-0% - Minimum|14
+0%|14
 1%|27
+5%|39
 10%|47
-50% - Median|82
+25%|62
+50%|82
+75%|105
 90%|127
+95%|140
 99%|162
-100% - Maximum|197
+100%|197
 
-The algorithm is obviously flawed, but it is not too bad given its rudimentary procedure. It performs slightly worse than the average player, but it doesn't have the knowledge of the entire game state like the user does. It doesn't even realize it's trapped itself until it's too late. Considering that it is a purely reactionary algorithm, it actually performs surprisingly well - occasionally even better than me.
-
-## Version History
-
-1.0.0 (March 4, 2018) - initial version
+While the algorithm is obviously flawed, it is not too bad given its rudimentary procedure. It performs slightly worse than the average player, but it doesn't have the knowledge of the entire game state like the user does. It doesn't even realize it's trapped itself until it's too late. Considering that it is a purely reactionary algorithm, it actually performs surprisingly well within its constraints - occasionally even better than me.
